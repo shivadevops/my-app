@@ -4,6 +4,7 @@ node{
    }
    stage('Compile-Package'){
       // Get maven home path
+      // def mvnHome =  tool name: 'maven-3', type: 'maven'
       def mvnHome =  tool name: 'Maven', type: 'maven'   
       sh "${mvnHome}/bin/mvn package"
    }
@@ -12,12 +13,15 @@ node{
       Thanks
       Shiva''', cc: '', from: '', replyTo: '', subject: 'This is a Jenkins Job', to: 'siva.aug07@gmail.com'
    }
-   stage('Slack Notification'){
+   
+   // Here I commented this slack notification.
+   
+  /*   stage('Slack Notification'){
        slackSend baseUrl: 'https://hooks.slack.com/services/',
        channel: '#jenkins-pipeline-demo',
        color: 'good', 
        message: 'Welcome to Jenkins, Slack!', 
        teamDomain: 'javahomecloud',
        tokenCredentialId: 'slack-demo'
-   }
+    }    */  
 }
