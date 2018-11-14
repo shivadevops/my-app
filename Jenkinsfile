@@ -9,10 +9,10 @@ node{
       sh "${mvnHome}/bin/mvn package"
    }
   stage('Email Notification'){
-      mail bcc: '', body: '''Hi shiva,
-      Welcome to jenkins E-Mail alerts
-      Thanks,
-      Shiva''', cc: '', from: '', replyTo: '', subject: 'This is a Jenkins Job', to: 'siva.aug07@gmail.com'
+      mail bcc: '', body: '''Hello shiva,
+
+         This is a test mail. Welcome to Jenkins pipeline''', cc: 'siva.gummaji@gmail.com', from: '', 
+         replyTo: '', subject: 'Jenkins Test Job', to: 'siva.aug07@gmail.com'
    }     
    
    // Here I commented this slack notification.
