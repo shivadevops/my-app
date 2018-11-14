@@ -5,14 +5,15 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       // def mvnHome =  tool name: 'maven-3', type: 'maven'
-      def mvnHome =  tool name: 'Maven', type: 'maven'   
+      def mvnHome =  tool name: 'Maven3', type: 'maven'   
       sh "${mvnHome}/bin/mvn package"
    }
- /*  stage('Email Notification'){
-      mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-      Thanks
+  stage('Email Notification'){
+      mail bcc: '', body: '''Hi shiva,
+      Welcome to jenkins E-Mail alerts
+      Thanks,
       Shiva''', cc: '', from: '', replyTo: '', subject: 'This is a Jenkins Job', to: 'siva.aug07@gmail.com'
-   }     */
+   }     
    
    // Here I commented this slack notification.
    
