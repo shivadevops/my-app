@@ -11,7 +11,7 @@ node{
   stage('Email Notification'){
       mail bcc: '', body: '''Hello shiva,
 
-         This is a test mail. Welcome to Jenkins pipeline''', cc: 'siva.gummaji@gmail.com', from: '', 
+         This is a test mail. Welcome to Jenkins pipeline''', cc: 'siva.gummaji@gmail.com', from: 'anil.akj72@gmail.com', 
          replyTo: '', subject: 'Jenkins Test Job', to: 'siva.aug07@gmail.com'
    }     
    
